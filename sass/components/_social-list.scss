@@ -1,0 +1,39 @@
+.social__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+
+.social__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+    transition: fill var(--time-and-function),
+    background-color var(--time-and-function),
+    transform var(--time-and-function);
+
+    fill: var(--fill-icon);
+
+    &:hover,
+    &:focus {
+        fill: var(--banner-text-color);
+        background-color: var(--button-bgc);
+        transform: scale(1.1);
+    }
+
+    &--footer {
+        fill: var(--banner-text-color);
+        background: rgba(255, 255, 255, 0.1);
+    }
+}
+
+
+
+

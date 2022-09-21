@@ -1,0 +1,27 @@
+.clients__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+
+}
+
+.clients__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 170px;
+    min-height: 92px;
+
+    transition: fill var(--time-and-function), border var(--time-and-function);
+
+    fill: var(--fill-icon);
+    border: 1px solid var(--fill-icon);
+    border-radius: 4px;
+
+    &:hover,
+    &:focus {
+        fill: var(--button-bgc);
+        border: 1px solid var(--button-bgc);
+    }
+}
+

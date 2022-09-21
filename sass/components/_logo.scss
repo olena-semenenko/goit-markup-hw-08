@@ -1,0 +1,22 @@
+.logo{
+    font-family: var(--secondary-font);
+    font-weight: var(--font-weight-title);
+    font-size: 26px;
+}
+
+.logo--header{
+    margin-right: 93px;
+
+    color: var(--logo-text-black);
+}
+
+.logo--footer {
+    display: block;
+    margin-bottom: 20px;
+
+    color: var(--banner-text-color);
+}
+
+.logo--blue {
+    color: var(--accent-text-color);
+}
