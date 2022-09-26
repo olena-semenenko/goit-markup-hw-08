@@ -7,15 +7,17 @@
 
 .footer__section {
     display: flex;
-    align-items: baseline;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer-contact__list {
     font-style: normal;
+    text-align: center;
 }
 
 .footer-contact__item:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
 }
 
 .footer-contact__link {
@@ -24,37 +26,39 @@
     color: rgba(255, 255, 255, 0.6);
     transition: color var(--time-and-function);
 
-    &:hover,
-    &:focus {
+        &:hover,
+        &:focus {
             color: var(--accent-text-color);
         }
 
-    &--map {
-    line-height: 1.7;
-    color: var(--banner-text-color);
+        &--map {
+            line-height: 1.7;
+            color: var(--banner-text-color);
         }
 }
-
 .footer__social {
-    margin-left: 70px;
+    margin-top: 60px;
 }
 
 .footer__form {
-    margin-left: auto;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
 }
 
 .subscription {
-    display: flex;
-    align-items: center;
-}
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
 .subscription__label {
-    margin-right: 12px;
+    margin-bottom: 20px;
 }
 
 .subscription__field {
-    width: 358px;
+    width: 90vw;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
@@ -110,4 +114,60 @@
     height: 24px;
     fill: var(--banner-text-color);
 }
+
+// screen min480
+@media screen and (min-width: 480px){
+    .subscription__field {
+        width: 450px;
+    }
+}
+
+// screen min768
+@media screen and (min-width: 768px){
+    .footer__section {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: baseline;
+    }
+    .footer__social {
+        margin-top: 0px;
+    }
+}
+
+// screen min1200
+@media screen and (min-width: 1200px) {
+    .footer__section {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .footer-contact__item:not(:last-child) {
+        margin-bottom: 9px;
+    }
+    .footer-contact__list {
+        text-align: start;
+    }
+    .footer__social {
+        margin-left: 70px;
+    }
+    .footer__form {
+        margin-left: auto;
+        margin-top: 0;
+        align-items:flex-start;
+    }
+    .footer__title{
+        text-align: start;
+    }
+    .subscription {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .subscription__label {
+        margin-right: 12px;
+    }
+    .subscription__field {
+        width: 358px;
+    }
+}
+
 

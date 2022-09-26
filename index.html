@@ -61,6 +61,66 @@
             >
           </li>
         </ul>
+
+        <!-- Mobile menu button -->
+        <button class="mobile-menu__button js-open-menu" type="button">
+          <svg class="mobile-menu__icon">
+            <use href="./images/icons.svg#icon-mobile-menu"></use>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="mobile-menu container js-menu-container">
+        <button class="mobile-menu__closed js-close-menu">
+          <svg width="19" heigth="19">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+
+        <nav>
+          <ul class="mobile-nav">
+            <li class="mobile-nav__item">
+              <a class="mobile-nav__link mobile-nav__link--current" href="./index.html">Студія</a>
+            </li>
+            <li class="mobile-nav__item">
+              <a class="mobile-nav__link" href="./portfolio.html">Портфоліо</a>
+            </li>
+            <li class="mobile-nav__item">
+              <a class="mobile-nav__link" href="#">Контакти</a>
+            </li>
+          </ul>
+        </nav>
+
+        <ul class="mobile-list-contacts">
+          <li class="mobile-list-contacts__item">
+            <a
+              class="mobile-list-contacts__link mobile-list-contacts__link--tel"
+              href="tel:+380961111111"
+            >
+              +38 096 111 11 11</a
+            >
+          </li>
+          <li class="mobile-list-contacts__item">
+            <a class="mobile-list-contacts__link" href="mailto:info@devstudio.com">
+              info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="mobile-list-social">
+          <li class="mobile-list-social__item">
+            <a class="mobile-list-social__link" href="#" aria-label="Instagram">Instagram</a>
+          </li>
+          <li class="mobile-list-social__item">
+            <a class="mobile-list-social__link" href="#" aria-label="Twitter">Twitter</a>
+          </li>
+          <li class="mobile-list-social__item">
+            <a class="mobile-list-social__link" href="#" aria-label="Facebook">Facebook</a>
+          </li>
+          <li class="mobile-list-social__item">
+            <a class="mobile-list-social__link" href="#" aria-label="LinkedIn">LinkedIn</a>
+          </li>
+        </ul>
       </div>
     </header>
 
@@ -75,7 +135,7 @@
       </section>
 
       <!--About us-->
-      <section class="benefits">
+      <section class="benefits section benefits__section">
         <div class="container">
           <!--Hidden h2-->
           <h2 class="section__title vis-hidden">Особливості</h2>
@@ -115,19 +175,23 @@
       </section>
 
       <!--About products-->
-      <section class="section">
+      <section class="product section">
         <div class="container">
           <h2 class="section__title">Чим ми займаємося</h2>
           <ul class="product__list">
             <li class="product__card">
-              <img src="./images/main_page/box1.jpg" alt="Людина працює з ноутбуком" width="370" />
+              <img
+                srcset="./images/desktop/img1@1x.jpg 1x, ./images/desktop/img1@2x.jpg 2x"
+                alt="Людина працює з ноутбуком"
+                width="370"
+              />
               <div class="product__overlay">
                 <p class="product__title">Декстопні додатки</p>
               </div>
             </li>
             <li class="product__card">
               <img
-                src="./images/main_page/box2.jpg"
+                srcset="./images/desktop/img2@1x.jpg 1x, ./images/desktop/img2@2x.jpg 2x"
                 alt="Людина перед монитором комп'ютера дивиться на екран смартфона"
                 width="370"
               />
@@ -136,7 +200,11 @@
               </div>
             </li>
             <li class="product__card">
-              <img src="./images/main_page/box3.jpg" alt="Людина працює з планшетом" width="370" />
+              <img
+                srcset="./images/desktop/img3@1x.jpg 1x, ./images/desktop/img3@2x.jpg 2x"
+                alt="Людина працює з планшетом"
+                width="370"
+              />
               <div class="product__overlay">
                 <p class="product__title">Дизайнерські рішення</p>
               </div>
@@ -151,11 +219,35 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img src="./images/main_page/img1.jpg" alt="Дизайнер Ігор Дем'яненко " width="270" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/photo-igor@1x.jpg 1x,
+                    ./images/desktop/photo-igor@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/photo-igor@1x.jpg 1x,
+                    ./images/tablet/photo-igor@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/photo-igor@1x.jpg 1x,
+                    ./images/mobile/photo-igor@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img class="team__photo" src="#" alt="Дизайнер Ігор Дем'яненко " />
+              </picture>
+
               <div class="team__employee">
                 <h3 class="team__subtitle">Ігор Дем'яненко</h3>
-                <p lang="en">Product Designer</p>
-                <ul class="social__list">
+                <p class="team__position" lang="en">Product Designer</p>
+                <ul class="social__list team__social-list">
                   <li>
                     <a class="social__icon" href="#" aria-label="Instagram">
                       <svg width="20" height="20">
@@ -188,11 +280,34 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/main_page/img2.jpg" alt="Розробник Ольга Рєпіна" width="270" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/photo-olga@1x.jpg 1x,
+                    ./images/desktop/photo-olga@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/photo-olga@1x.jpg 1x,
+                    ./images/tablet/photo-olga@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/photo-olga@1x.jpg 1x,
+                    ./images/mobile/photo-olga@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img class="team__photo" src="#" alt="Розробник Ольга Рєпіна" />
+              </picture>
               <div class="team__employee">
                 <h3 class="team__subtitle">Ольга Рєпіна</h3>
-                <p lang="en">Frontend Developer</p>
-                <ul class="social__list">
+                <p class="team__position" lang="en">Frontend Developer</p>
+                <ul class="social__list team__social-list">
                   <li>
                     <a class="social__icon" href="#" aria-label="Instagram">
                       <svg width="20" height="20">
@@ -225,11 +340,34 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/main_page/img3.jpg" alt="Маркетолог Микола Тарасов" width="270" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/photo-mikola@1x.jpg 1x,
+                    ./images/desktop/photo-mikola@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/photo-mikola@1x.jpg 1x,
+                    ./images/tablet/photo-mikola@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/photo-mikola@1x.jpg 1x,
+                    ./images/mobile/photo-mikola@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img class="team__photo" src="#" alt="Маркетолог Микола Тарасов" />
+              </picture>
               <div class="team__employee">
                 <h3 class="team__subtitle">Микола Тарасов</h3>
-                <p lang="en">Marketing</p>
-                <ul class="social__list">
+                <p class="team__position" lang="en">Marketing</p>
+                <ul class="social__list team__social-list">
                   <li>
                     <a class="social__icon" href="#" aria-label="Instagram">
                       <svg width="20" height="20">
@@ -262,11 +400,34 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/main_page/img4.jpg" alt="Дизайнер Михайло Єрмаков" width="270" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/photo-myhailo@1x.jpg 1x,
+                    ./images/desktop/photo-myhailo@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/photo-myhailo@1x.jpg 1x,
+                    ./images/tablet/photo-myhailo@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/photo-myhailo@1x.jpg 1x,
+                    ./images/mobile/photo-myhailo@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img class="team__photo" src="#" alt="Дизайнер Михайло Єрмаков" />
+              </picture>
               <div class="team__employee">
                 <h3 class="team__subtitle">Михайло Єрмаков</h3>
-                <p lang="en">UI Designer</p>
-                <ul class="social__list">
+                <p class="team__position" lang="en">UI Designer</p>
+                <ul class="social__list team__social-list">
                   <li>
                     <a class="social__icon" href="#" aria-label="Instagram">
                       <svg width="20" height="20">
@@ -390,7 +551,11 @@
           <p class="footer__title">Приєднуйтесь</p>
           <ul class="social__list">
             <li>
-              <a class="social__icon social__icon--footer" href="#" aria-label="Instagram">
+              <a
+                class="social__icon footer__social__icon social__icon--footer"
+                href="#"
+                aria-label="Instagram"
+              >
                 <svg width="20" height="20">
                   <use href="./images/icons.svg#icon-instagram"></use>
                 </svg>
@@ -402,7 +567,11 @@
               </a>
             </li>
             <li>
-              <a class="social__icon social__icon--footer" href="#" aria-label="Facebook">
+              <a
+                class="social__icon footer__social-icon social__icon--footer"
+                href="#"
+                aria-label="Facebook"
+              >
                 <svg width="20" height="20">
                   <use href="./images/icons.svg#icon-facebook"></use>
                 </svg>
@@ -528,5 +697,6 @@
 
     <!-- Script -->
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

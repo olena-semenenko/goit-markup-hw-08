@@ -1,10 +1,19 @@
 .section__title{
-    margin-bottom: 50px;
-
+    margin-bottom: 30px;
+    
     font-weight: var(--font-weight-title);
-    font-size: 36px;
+    font-size: 28px;
     text-align: center;
+
     color: var(--title-text-color);
+}
+
+// screen min1200
+@media screen and (min-width: 1200px) {
+    .section__title{
+        margin-bottom: 50px;
+        font-size: 33px;
+    }
 }
 
 .footer__title {
@@ -12,4 +21,10 @@
     text-transform: uppercase;
     color: var(--primary-bgc);
     margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1199px) {
+    .footer__title{
+        text-align: center;
+    }
 }

@@ -1,8 +1,8 @@
 .backdrop {
     position: fixed;
     z-index: 100;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     top: 0;
     left: 0;
     transition: opacity 1000ms ease, visibility 1000ms ease;
@@ -10,14 +10,16 @@
     background-color: rgba(0, 0, 0, 0.2);
 }
 
+
+
 .modal {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 50vh;
+    left: 50vw;
     transform: translate(-50%, -50%) scale(1) rotate(0deg);
     transition: transform 1000ms ease;
-    width: 528px;
-    height: 581px;
+    width: 100%;
+    height: 100%;
     padding: 40px;
 
     background-color: var(--primary-bgc);
@@ -41,12 +43,15 @@
     background-color: transparent;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+
+        &:hover,
+        &:focus {
+            fill: var(--button-bgc);
+        }
+
 }
 
-.modal__btn-closed:hover,
-.modal__btn-closed:focus {
-    fill: var(--button-bgc);
-}
+
 
 .is-hidden {
     visibility: hidden;
@@ -56,4 +61,26 @@
 
 .backdrop.is-hidden .modal {
     transform: translate(-50%, -50%) scale(0) rotate(90deg);
+}
+
+// screen min480
+@media screen and (min-width:480px) {
+    .backdrop{
+        width: 100%;
+        height: 100%;
+    }
+    .modal {
+        width: 450px;
+        height: 609px;
+    }
+}
+
+// screen min1200
+@media screen and (min-width:1200px){
+    .modal{
+        top: 50%;
+        left: 50%;
+        width: 528px;
+        height: 581px;
+    }
 }

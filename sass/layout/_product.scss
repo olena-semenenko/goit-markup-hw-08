@@ -1,3 +1,15 @@
+.product{
+    display: none;
+}
+
+// screen min1200
+@media screen and (min-width: 1200px){
+    .product {
+        display: block;
+    }
+    
+}
+
 .product__list {
     display: flex;
     justify-content: space-between;

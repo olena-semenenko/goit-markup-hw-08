@@ -5,8 +5,6 @@
 }
 
 .logo--header{
-    margin-right: 93px;
-
     color: var(--logo-text-black);
 }
 
@@ -19,4 +17,22 @@
 
 .logo--blue {
     color: var(--accent-text-color);
+}
+
+@media screen and (min-width: 768px){
+    .logo--header {
+        margin-right: 87px;
+    }
+}
+
+@media screen and (max-width: 1199px){
+    .logo{
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .logo--header {
+            margin-right: 93px;
+        }
 }
