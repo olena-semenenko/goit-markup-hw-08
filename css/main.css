@@ -199,7 +199,6 @@ body {
   top: 0;
   left: 0;
   transition: opacity 1000ms ease, visibility 1000ms ease;
-  overflow: scroll;
   background-color: rgba(0, 0, 0, 0.2);
 }
 
