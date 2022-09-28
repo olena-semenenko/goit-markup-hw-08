@@ -47,6 +47,11 @@
     }
 }
 
+@media screen and (max-width: 767px){
+    .benefits-list__description {
+        text-align: center;
+    }
+}
 
 // screen min768
 @media screen and (min-width: 768px){
