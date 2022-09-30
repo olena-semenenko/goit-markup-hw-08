@@ -1,10 +1,11 @@
 .backdrop {
     position: fixed;
     z-index: 100;
-    width: 90vw;
+    width: 100vw;
     height: 100vh;
     top: 0;
     left: 0;
+    overflow: scroll;
     transition: opacity 1000ms ease, visibility 1000ms ease;
     
 
@@ -77,16 +78,19 @@
         height: 609px;
     }
 }
-@media screen and (min-width:768px){
+// @media screen and (min-width:768px){
+//     .modal {
+//         top: 50%;
+//         left: 50%;
+//         transform: translate(-50%, -50%) scale(1) rotate(0deg);
+//     }
+// }
+// screen min1200
+@media screen and (min-width:1200px) {
     .modal {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%) scale(1) rotate(0deg);
-    }
-}
-// screen min1200
-@media screen and (min-width:1200px) {
-    .modal {
         width: 528px;
         height: 581px;
     }

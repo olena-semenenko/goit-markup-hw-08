@@ -13,6 +13,7 @@
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    overflow: scroll;
     transform: translateX(-100%);
 
     transition: opacity var(--time-and-function), visibility var(--time-and-function), transform var(--time-and-function);

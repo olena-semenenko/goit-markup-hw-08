@@ -194,10 +194,11 @@ body {
 .backdrop {
   position: fixed;
   z-index: 100;
-  width: 90vw;
+  width: 100vw;
   height: 100vh;
   top: 0;
   left: 0;
+  overflow: scroll;
   transition: opacity 1000ms ease, visibility 1000ms ease;
   background-color: rgba(0, 0, 0, 0.2);
 }
@@ -253,15 +254,11 @@ body {
     height: 609px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .modal {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1) rotate(0deg);
-  }
-}
-@media screen and (min-width: 1200px) {
-  .modal {
     width: 528px;
     height: 581px;
   }
@@ -280,6 +277,7 @@ body {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  overflow: scroll;
   transform: translateX(-100%);
   transition: opacity var(--time-and-function), visibility var(--time-and-function), transform var(--time-and-function);
   font-weight: var(--font-weight-content);
@@ -1068,6 +1066,7 @@ body {
   .modal-form-check {
     flex-wrap: wrap;
     align-items: flex-end;
+    font-size: 7px;
   }
 }
 @media screen and (min-width: 1200px) {
