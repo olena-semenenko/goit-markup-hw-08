@@ -32,12 +32,12 @@
 
 
 .mobile-nav {
-    margin-bottom: calc(306px - 10%);
+    margin-bottom: calc(306/480 * 100vh);
 }
 
 .mobile-nav__link {
     display: block;
-    font-size: calc(40px - 40%);
+    font-size: calc(40/480 * 100vw);
 
     transition: color var(--time-and-function);
 
@@ -50,7 +50,7 @@
 }
 
 .mobile-nav__item:not(:last-child) {
-    margin-bottom: calc(32px - 10%);
+    margin-bottom: calc(32/480 * 100vh);
 }
 
 .mobile-nav__link--current {
@@ -58,20 +58,20 @@
 }
 
 .mobile-list-contacts {
-    margin-bottom: calc(64px - 10%);
+    margin-bottom: calc(64/480 * 100vh);
 }
 
 .mobile-list-contacts__item {
-    font-size: calc(24px - 40%);
+    font-size: calc(24/480 * 100vw);
 
     color: var(--primary-text-color);
 }
 
 .mobile-list-contacts__link--tel {
     display: inline-block;
-    margin-bottom: calc(32px - 10%);
+    margin-bottom: calc(32/480 * 100vh);
 
-    font-size: calc(34px - 40%) ;
+    font-size: calc(34/480 * 100vw) ;
 
     color: var(--accent-text-color);
 
@@ -80,7 +80,7 @@
 .mobile-list-social {
     display: flex;
 
-    font-size: calc(18px - 40%);
+    font-size: calc(18/480 * 100vw);
 
     color: var(--accent-text-color);
 }
